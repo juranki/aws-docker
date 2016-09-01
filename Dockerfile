@@ -19,5 +19,9 @@ RUN pip install awscli
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/docker-entrypoint.sh
 
+RUN mkdir ~/.aws \
+  && touch ~/.aws/credentials \
+  && touch ~/.aws/config
+
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["sh"]
