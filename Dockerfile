@@ -4,10 +4,9 @@ RUN apk add --no-cache \
 		ca-certificates \
 		curl \
 		openssl \
-		py-pip \
-		fabric
+		py-pip
 
-RUN pip install awscli
+RUN pip install awscli fabric
 
 RUN mkdir ~/.aws \
   && touch ~/.aws/credentials \
