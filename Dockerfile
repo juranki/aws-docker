@@ -1,10 +1,11 @@
-FROM docker:17.06-dind
+FROM docker:17.09
 
 RUN apk add --no-cache \
 		ca-certificates \
 		curl \
 		openssl \
-		py-pip
+		py-pip \
+		fabric
 
 RUN pip install awscli
 
