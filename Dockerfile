@@ -5,6 +5,7 @@ RUN apk add --no-cache \
 		curl \
 		openssl \
 		build-base \
+		python-dev \
 		py-pip
 
 RUN pip install awscli fabric
